@@ -1,2 +1,2 @@
-# viray.github-io
+# viray.github.io
 personal website
