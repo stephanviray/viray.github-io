@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),transparent), url(assets/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: normal;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: left;
+    padding: 30px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: -3px;
+    right: 0%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 50%;
+}
+.text-box{
+    color: #fff;
+    position: absolute;
+    bottom: 8%;
+}
+
+.text-box p{
+    font-size: 30px;
+    font-weight: 530;
+    text-align: center;
+    margin: -40px;
+}
+.card{
+    position: relative;
+    width: 350px;
+    height: 85px;
+    background: #15092261#398cc0;
+    float: right;
+    border-radius: 20px;
+    filter: drop-shadow(-20px 20px 40px #398cc055);
+    transition: 0.5s ease-in-out;
+}
+.card.active{
+    height: 420px;
+}
+.toggle{
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70px;
+    height: 60px;
+    background: #15092261#398cc0;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    cursor: pointer;
+}
+.toggle::before{
+    content: '';
+    position: absolute;
+    left: -34px;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border-top-right-radius: 35px;
+    box-shadow: 11px -10px 0 10px #15092261#398cc0;
+}
+.toggle::after{
+    content: '';
+    position: absolute;
+    right: -34px;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border-top-left-radius: 35px;
+    box-shadow: -11px -10px 0 10px #15092261#398cc0;
+}
+.toggle span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%) rotate(405deg);
+    width: 10px;
+    height: 10px;
+    border-bottom: 3px solid #f00;
+    border-right: 3px solid #a38e88;
+    transition: 0.5s  ease-in-out;
+}
+.card.active .toggle span{
+    transform: translate(-50%, -70%) rotate(225deg);
+}
+
+.contentBox{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+.contentBox .content{
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contentBox .content h2{
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.25em;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1,1em;
+}
+.contentBox .content h2 span{
+    font-size: 0.75em;
+    font-weight: 400;
+    text-transform: initial;
+    font-family: monospace;
+}
+.imgBox{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: #fff;
+    margin-top: 27px;
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+    border: 5px solid #fff;
+}
+.imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-box h1{
+    font-size: 80px;
+    line-height: 160px;
+    text-align: end;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(assets/images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }    
+}
+.About-bg{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),transparent), url(assets/images/h2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}
+.About-text h3{
+    font-family: cursive;
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.About-text p{
+    color: white;
+    text-align: center;
+    margin-bottom: -50px;
+    height: 0vh;
+}
+.box{
+    position: relative;
+    width: 268px;
+    height: 356px;
+    background: rgb(255 0 0);
+    border-radius: 8px;
+    float: right;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: -68%;
+    left: -90%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: -68%;
+    left: -90%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate{
+0%
+    {
+        transform: rotate(0deg);
+    }
+    0%
+    {
+        transform: rotate(360deg);
+    }
+}
+.form{
+    position: relative;
+    width: 0;
+    height: 352px;
+    background: rgb(0 0 0);
+    border-radius: 8px;
+    float: right;
+    inset: 2px;
+
+}
+.img-abt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+}
+.Talents-bg{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),transparent), url(assets/images/black.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}
+.Talents-text h3{
+    font-family: cursive;
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    padding: 30px;
+    box-sizing: border-box;
+}
